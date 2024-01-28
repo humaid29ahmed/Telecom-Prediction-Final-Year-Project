@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Churn Prediction</title>
+</head>
+<body>
+    <h1>This is churn prediction</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+         Age <input type="number" name="Age" required> <br>
+         Tenure in months <input type="number" name="Tenure_in_Months" required> <br>
+        Offer Type <select name="Offer" id="" required>
+            <option value=0>Offer A</option>
+            <option value=1>Offer B</option>
+            <option value=2>Offer C</option>
+            <option value=3>Offer D</option>
+            <option value=4>Offer E</option>
+        </select><br>
+        Internet Type <select name="Internet_Type" id="" required>
+            <option value=0>Fiber Optic</option>
+            <option value=1>DSL</option>
+            <option value=2>Cable</option>
+        </select><br>
+        Avg Monthly GB Download <input type="number" name="Avg_Monthly_GB_Download" required> <br>
+        Unlimited Data <select name="Unlimited_Data" id="" required>
+            <option value=0>Yes</option>
+            <option value=1>No</option>
+        </select> <br>
+        Contract <select name="Contract" id="" required>
+            <option value=0>Month-to-Month</option>
+            <option value=1>Two Year</option>
+            <option value=2>One Year</option>
+        </select><br>
+        Payment Method <select name="Payment_Method" id="" required>
+            <option value=0>Bank Withdrawal</option>
+            <option value=1>Credit Card</option>
+            <option value=2>Mailed Check</option>
+         </select><br>
+        Monthly Charges <input type="number" name="Monthly_Charge" required> <br>
+        Total Exta Charges <input type="number" name="Total_Extra_Data_Charges" required> <br>
+        <input type="submit">
+      </form>
+      {% if result %}
+
+       <h1>The Customer is going to {{result}}</h1>
+
+      {% endif %}
+</body>
+</html>
